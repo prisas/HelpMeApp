@@ -29,7 +29,8 @@
                 android:text="Title1"
                 android:gravity="center"
                 android:textSize="26dp"
-                android:id="@+id/problemTitle1" />
+                android:id="@+id/problemTitle1"
+                android:editable="false" />
 
             <TextView
                 android:layout_width="match_parent"

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  coordinates: MyString
+  imageUri: MyString
+  timestamp: 2016-07-21 19:09:40
+
+two:
+  title: MyString
+  description: MyText
+  coordinates: MyString
+  imageUri: MyString
+  timestamp: 2016-07-21 19:09:40

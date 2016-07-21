@@ -15,6 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".CreateProblemActivity" />
+        <activity android:name=".ProblemListActivity" />
+        <activity android:name=".ProblemDetailsActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".OptionsActivity"></activity>
     </application>
 
 </manifest>

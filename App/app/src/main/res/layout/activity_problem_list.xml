@@ -1,12 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/grey"
     tools:context="com.helpmeapp.gtbcn.helpmeapp.ProblemListActivity">
 
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewProblemList"
+        android:layout_gravity="center_horizontal" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title1"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title2"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title3"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title4"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title5"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title6"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title7"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title8"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title9"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle9" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:text="Title10"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginTop="12dp"
+                android:text="Title11"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:id="@+id/problemTitle11" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

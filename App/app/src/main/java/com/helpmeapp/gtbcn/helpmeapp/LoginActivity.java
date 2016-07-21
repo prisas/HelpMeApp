@@ -23,6 +23,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         final Button button = (Button) findViewById(R.id.loginButton);
+        final Button registerbutt = (Button) findViewById(R.id.RegisterButton);
+
+        // LOGIN BUTTON LISTENER
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -33,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                 String passw = userPassword.getText().toString();
 
                 try {
-                    URL url = new URL("http://localhost:3000/users"); // Change this URL before definitive version!
+                    URL url = new URL("http://localhost:3000/users/login"); // Change this URL before definitive version!
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     urlConnection.setRequestMethod("POST");
 
@@ -74,6 +77,15 @@ public class LoginActivity extends AppCompatActivity {
             }
 
 
+        });
+
+        // REGISTER BUTTON LISTENER
+        registerbutt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+
+            }
         });
 
     }

@@ -17,6 +17,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     private GoogleMap mMap;
 
     Float lat, lng;
+    String s_lat, s_lng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         mapFragment.getMapAsync(this);
 
         Intent intent = getIntent();
-        String s_lat = intent.getStringExtra("lat");
-        String s_lng = intent.getStringExtra("lng");
+        s_lat = intent.getStringExtra("lat");
+        s_lng = intent.getStringExtra("lng");
         lat = Float.parseFloat(s_lat);
         lng = Float.parseFloat(s_lng);
     }
@@ -52,6 +53,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         // Add a marker in Barcelona and move the camera
         LatLng barcelona = new LatLng(lat, lng);
         mMap.addMarker(new MarkerOptions().position(barcelona).title("Marker in Barcelona"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(barcelona));
+        if (s_lat.equals("41.38748400000001") && s_lng.equals("2.112728999999945")) {
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(barcelona));
+        } else {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(barcelona, 16f));
+        }
     }
 }

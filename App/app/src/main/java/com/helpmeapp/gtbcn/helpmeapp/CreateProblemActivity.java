@@ -68,7 +68,7 @@ public class CreateProblemActivity extends AppCompatActivity {
 
             try {
                 URL url = new URL(API_URL + "/addproblem.php?title=" + title + "&description=" + description +
-                                  "&long=" + "0" + "&lat=" + "0" + "&user_id=" + "1");
+                                  "&long=" + "2.11212694644928" + "&lat=" + "41.3885759995284" + "&user_id=" + "1");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));

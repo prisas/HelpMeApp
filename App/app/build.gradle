@@ -5,6 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.helpmeapp.gtbcn.helpmeapp"
         minSdkVersion 18
         targetSdkVersion 24

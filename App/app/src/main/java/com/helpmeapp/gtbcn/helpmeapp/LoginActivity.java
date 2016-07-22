@@ -109,6 +109,9 @@ public class LoginActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
 
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             /*
             if (response == null) {

@@ -1,6 +1,7 @@
 package com.helpmeapp.gtbcn.helpmeapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -59,8 +60,10 @@ public class ProblemListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                String itemValue = (String) listView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), "Position :" + listItemsId.get(position) + "  ListItem : " +itemValue , Toast.LENGTH_LONG).show();
+                String problemId = listItemsId.get(position);
+                Intent intent = new Intent(getApplicationContext(), ProblemDetailsActivity.class);
+                intent.putExtra("problemId", problemId);
+                startActivity(intent);
             }
 
         });

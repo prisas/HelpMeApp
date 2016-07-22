@@ -1,5 +1,6 @@
 package com.helpmeapp.gtbcn.helpmeapp;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     private GoogleMap mMap;
 
+    Float lat, lng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Intent intent = getIntent();
+        String s_lat = intent.getStringExtra("lat");
+        String s_lng = intent.getStringExtra("lng");
+        lat = Float.parseFloat(s_lat);
+        lng = Float.parseFloat(s_lng);
     }
 
 
@@ -41,7 +50,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         mMap = googleMap;
 
         // Add a marker in Barcelona and move the camera
-        LatLng barcelona = new LatLng(41, 2);
+        LatLng barcelona = new LatLng(lat, lng);
         mMap.addMarker(new MarkerOptions().position(barcelona).title("Marker in Barcelona"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(barcelona));
     }

@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         dataMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                intent.putExtra("lat", "41.38748400000001");
+                intent.putExtra("lng", "2.112728999999945");
                 startActivity(intent);
             }
         });

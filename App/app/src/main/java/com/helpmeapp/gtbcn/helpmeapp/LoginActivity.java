@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-            
+
             progressBar.setVisibility(View.GONE);
 
             if (response == null || response.equals("{\"code\":\"403\"}")) {

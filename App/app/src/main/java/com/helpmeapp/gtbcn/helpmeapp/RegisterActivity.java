@@ -54,7 +54,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String pass2 = userPwd2.getText().toString();
                 String phone = userPhone.getText().toString();
 
-                if (!pass1.equals(pass2)) {
+                if (name.equals("") || email.equals("") || pass1.equals("") || pass2.equals("") || phone.equals("")) {
+                    Toast.makeText(RegisterActivity.this, "Complete all fields before proceeding", Toast.LENGTH_SHORT).show();
+                } else if (!pass1.equals(pass2)) {
                     Toast.makeText(getApplicationContext(), "Passwords do not match.", Toast.LENGTH_LONG).show();
                 } else {
                     new Register().execute(name, email, pass1, phone);

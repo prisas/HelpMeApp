@@ -105,28 +105,17 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-
+            
             progressBar.setVisibility(View.GONE);
 
-            if (response == null) {
+            if (response == null || response.equals("{\"code\":\"403\"}")) {
                 Toast.makeText(LoginActivity.this, "There was a problem with the server, try it again!", Toast.LENGTH_SHORT).show();
             } else {
-                try {
-                    JSONArray responseJSON = new JSONArray(response);
-                    JSONObject responseCodeJSON = responseJSON.getJSONObject(0);
-                    String code = responseCodeJSON.getString("code");
-                    if (code.equals("200")) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Your details don't match, try it again!", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
             }
         }
     }

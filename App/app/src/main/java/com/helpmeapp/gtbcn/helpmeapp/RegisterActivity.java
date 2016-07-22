@@ -109,23 +109,14 @@ public class RegisterActivity extends AppCompatActivity {
 
             progressBar.setVisibility(View.GONE);
 
-            if (response == null) {
+            if (response == null || response.equals("{\"code\":\"500\"}")) {
                 Toast.makeText(RegisterActivity.this, "There was a problem with the server, try it again!", Toast.LENGTH_SHORT).show();
             } else {
-                try {
-                    JSONArray responseJSON = new JSONArray(response);
-                    JSONObject responseCodeJSON = responseJSON.getJSONObject(0);
-                    String code = responseCodeJSON.getString("code");
-                    if (code.equals("200")) {
-                        Toast.makeText(RegisterActivity.this, "User created successfully!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "There is a problem with your details, try it again!", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
             }
         }
     }

@@ -41,7 +41,12 @@
             android:theme="@style/generalNoTitle"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LoginActivity" >
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,11 +54,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".CreateProblemActivity" />
-        <activity android:name=".ProblemListActivity" />
-        <activity android:name=".ProblemDetailsActivity" />
-        <activity android:name=".OptionsActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CreateProblemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ProblemListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ProblemDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".OptionsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -68,7 +103,11 @@
 
         <activity
             android:name=".MapActivity"
-            android:label="@string/title_activity_map"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/generalNoTitle"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

@@ -11,128 +11,17 @@
     android:background="@color/grey"
     tools:context="com.helpmeapp.gtbcn.helpmeapp.ProblemListActivity">
 
-    <ScrollView
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal" />
+
+    <ListView
+        android:id="@+id/list_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollViewProblemList"
-        android:layout_gravity="center_horizontal" >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+        android:layout_height="wrap_content">
+    </ListView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title1"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle1"
-                android:editable="false" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title2"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title3"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle3" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title4"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle4" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title5"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle5" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title6"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle6" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title7"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle7" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title8"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle8" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title9"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle9" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:visibility="invisible"
-                android:text="Title10"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle10" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:layout_marginTop="12dp"
-                android:text="Title11"
-                android:gravity="center"
-                android:textSize="26dp"
-                android:id="@+id/problemTitle11" />
-
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

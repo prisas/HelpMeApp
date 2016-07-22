@@ -68,7 +68,7 @@ public class CreateProblemActivity extends AppCompatActivity {
 
             try {
                 URL url = new URL(API_URL + "/addproblem.php?title=" + title + "&description=" + description +
-                                  "&long=" + 0 + "&lat=" + 0 + "&user_id" + 1);
+                                  "&long=" + "0" + "&lat=" + "0" + "&user_id=" + "1");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -97,15 +97,7 @@ public class CreateProblemActivity extends AppCompatActivity {
             if (response == null || response.equals("{\"code\":\"500\"}")) {
                 Toast.makeText(CreateProblemActivity.this, "There was a problem with the server, try it again!", Toast.LENGTH_SHORT).show();
             } else {
-                new AlertDialog.Builder(getApplicationContext())
-                        .setTitle("Problem updated")
-                        .setMessage("Problem successfully created. Please wait a moment until someone comes to help you!")
-                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+                Toast.makeText(CreateProblemActivity.this, "Problem successfully updated", Toast.LENGTH_SHORT).show();
                 finish();
             }
         }

@@ -11,6 +11,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StringReader;
@@ -105,26 +109,24 @@ public class RegisterActivity extends AppCompatActivity {
 
             progressBar.setVisibility(View.GONE);
 
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
-            /*
             if (response == null) {
-                Toast.makeText(LoginActivity.this, "There was a problem with the serve, try it again!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "There was a problem with the server, try it again!", Toast.LENGTH_SHORT).show();
             } else {
                 try {
                     JSONArray responseJSON = new JSONArray(response);
                     JSONObject responseCodeJSON = responseJSON.getJSONObject(0);
                     String code = responseCodeJSON.getString("code");
                     if (code.equals("200")) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Toast.makeText(RegisterActivity.this, "User created successfully!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(LoginActivity.this, "Your details don't match, try it again!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "There is a problem with your details, try it again!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-            }*/
+            }
         }
     }
 }

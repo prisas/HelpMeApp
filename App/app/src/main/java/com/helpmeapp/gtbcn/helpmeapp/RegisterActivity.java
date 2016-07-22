@@ -20,7 +20,7 @@ import java.net.URLEncoder;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    static final String API_URL = "localhost";
+    static final String API_URL = "http://rgalarcia.com/gtbcn";
 
     ProgressBar progressBar;
     EditText userName, userEmail, userPwd, userPwd2, userPhone;

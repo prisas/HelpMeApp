@@ -27,7 +27,7 @@ import java.net.URLEncoder;
 
 public class LoginActivity extends AppCompatActivity {
 
-    static final String API_URL = "localhost";
+    static final String API_URL = "http://rgalarcia.com/gtbcn";
 
     ProgressBar progressBar;
     Button loginButton;
